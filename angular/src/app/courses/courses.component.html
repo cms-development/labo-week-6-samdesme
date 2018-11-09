@@ -1,0 +1,25 @@
+
+
+<div class="container">
+    <table class="table" style="margin-top: 18rem;">
+        <thead class="table-primary">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Course</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of courses">
+            <td>{{course.attributes.id}}</td>
+            <td>{{course.attributes.name}}</td>
+            <td>
+                <button class="btn" routerLink="/courses/{{course.id}}"><i class="fa fa-eye"></i></button>
+              <button class="btn"><i class="fa fa-edit"></i></button>
+              <button class="btn"><i class="fa fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

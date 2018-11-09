@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12" style="margin-top: 18rem;">
+
+      <div class="card border-light mb-3" *ngIf="course">
+        <div class="card-body">
+          <h4 class="card-title">{{course.attributes.name}}</h4>
+          <p class="card-text">Academic Institution: <span class="text-primary">{{course.attributes.field_academic_institution}}</span></p>
+        
+          <p class="card-text" *ngIf="instructor">
+
+            Instructor: <span class="text-primary">{{instructor.attributes.name}}</span>
+
+          </p>
+
+          <div *ngIf="students">
+          <p>Students: </p>
+            <ul *ngFor="let student of students">
+                <li class="text-primary">{{student.attributes.name}}</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
